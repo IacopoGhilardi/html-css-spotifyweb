@@ -4,30 +4,104 @@
     padding: 0;
 }
 
+body {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif
+}
+
 .wrapper {
     width: 100%;
     height: 100vh;
     background-color: black;
 }
 
+/***************** main *****************/
 main {
   display: flex;
   height: calc(100% - 100px);
 }
 
+/* main nav */
 .main-nav {
-  background: orange;
+  background: black;
   width: 250px;
+  padding-top: 20px;
+  color: white;
 }
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0 20px;
+}
+
+/* logo */
+.logo-nav {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+#logo img {
+  max-width: 100%;
+  height: 100%;
+}
+/* /logo */
+
+/* navbar top */
+.nav_logos li {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  list-style: none;
+
+}
+
+.nav_logos li a {
+  display: flex;
+  align-items: center;
+}
+
+.nav_logos .active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-left: 3px solid #ADFF2F;
+  z-index: 2;
+}
+
+.icon {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.nav_logos li a span {
+  font-size: 1rem;
+}
+
+/* /navbar top */
+
+/* playlist */
+
+/* playlist */
+
+/* /main nav */
+
 
 .main-content {
   width: calc(100% - 250px);
   background: lightblue;
   overflow-y: scroll;
 }
+/***************** /main *****************/
 
+/***************** footer *****************/
 footer {
   background-color: cornflowerblue;
   width: 100%;
   height: 100px;
 }
+/***************** /footer *****************/
