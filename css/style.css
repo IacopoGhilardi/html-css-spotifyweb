@@ -28,12 +28,15 @@ main {
   padding-top: 20px;
   color: #6B6B6B;
   overflow-y: hidden;
+  position: relative;
 }
 
 .main-nav a {
-  color: white;
+  color: #6B6B6B;
   text-decoration: none;
-  padding: 0 20px;
+}
+.main-nav a:hover {
+  color: white;
 }
 
 /* logo */
@@ -41,6 +44,7 @@ main {
   width: 100%;
   height: 40px;
   margin-bottom: 20px;
+  padding-left: 20px;
 }
 
 #logo img {
@@ -64,7 +68,7 @@ main {
 
 .nav_logos li a {
   display: flex;
-  color: #6B6B6B;
+  padding: 0 20px;
 }
 
 .nav_logos li a:hover {
@@ -108,7 +112,6 @@ main {
 /* playlist */
 .playlist {
   padding: 20px;
-  height: 100%;
   position: relative;
 }
 .playlist h2 {
@@ -122,6 +125,16 @@ main {
 .create {
   display: flex;
   align-items: center;
+  width: 100%;
+  border: none;
+}
+.create:hover .add {
+  background: white;
+  cursor: pointer;
+}
+.create:hover span {
+  color: white;
+  cursor: pointer;
 }
 
 .add {
@@ -139,10 +152,49 @@ main {
 .playlist_list li {
   list-style: none;
   height: 30px;
+  line-height: 30px;
+  font-size: .8rem;
+}
+/* playlist */
+
+/* account */
+.account {
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
+
+.install {
+  padding: 10px 0;
+  border-bottom: 1px solid #6B6B6B;
   font-size: .8rem;
 }
 
-/* playlist */
+.install i {
+  font-size: .5rem;
+  border: 1px solid #6B6B6B;
+  border-radius: 50%;
+  padding: 2px;
+  margin-right: 10px;
+}
+
+.account_name {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.account_name span {
+  font-weight: 700;
+  color: white;
+}
+.account_name i {
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+
+/* account */
 
 /* /main nav */
 
@@ -156,8 +208,17 @@ main {
 
 /***************** footer *****************/
 footer {
-  background-color: cornflowerblue;
+  background-color: #282828;
   width: 100%;
   height: 100px;
+}
+
+.footer_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+  color: white;
 }
 /***************** /footer *****************/
