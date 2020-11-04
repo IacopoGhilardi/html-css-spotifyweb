@@ -112,7 +112,11 @@ main {
 /* playlist */
 .playlist {
   padding: 20px;
+  height: 100%;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .playlist h2 {
   text-transform: uppercase;
@@ -159,13 +163,17 @@ main {
 
 /* account */
 .account {
-  padding: 20px;
-  position: relative;
+  background: black;
+  padding: 10px 20px;
+  position: sticky;
   bottom: 0;
   left: 0;
+  margin-top: 150px;
 }
 
 .install {
+  display: flex;
+  align-items: center;
   padding: 10px 0;
   border-bottom: 1px solid #6B6B6B;
   font-size: .8rem;
@@ -180,6 +188,8 @@ main {
 }
 
 .account_name {
+  display: flex;
+  align-items: center;
   padding: 10px 0;
   display: flex;
   align-items: center;
@@ -193,7 +203,6 @@ main {
   margin-right: 10px;
   font-size: 1.5rem;
 }
-
 /* account */
 
 /* /main nav */
@@ -222,3 +231,64 @@ footer {
   color: white;
 }
 /***************** /footer *****************/
+
+
+
+/* media query */
+@media screen and (max-width: 459px) {
+
+  .main-nav {
+    width: 50px;
+  }
+
+  .xs_hidden {
+    display: none;
+  }
+
+  .logo-nav{
+    padding-left: 10px;
+    margin-bottom: 5px;
+  }
+
+  .nav_logos li a {
+    padding: 0 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .icon {
+    margin: 0;
+  }
+
+  #logo i {
+    display: block;
+    color: white;
+    font-size: 2rem;
+  }
+
+  .playlist {
+    justify-content: flex-end;
+    padding: 0;
+  }
+
+  .account {
+    padding: 10px;
+    margin: 0;
+  }
+
+  .account_name,
+  .install {
+    border: none;
+    justify-content: center;
+  }
+
+  .account_name i,
+  .install i {
+    margin: 0;
+  }
+
+  .main-content {
+    width: calc(100% - 50px)
+  }
+}
+/* media query */

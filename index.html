@@ -20,7 +20,7 @@
           <!-- logo -->
           <section class="logo-nav">
             <a href="#" id="logo">
-              <img src="img/spotify-transp-white-1.png" alt="logo Spotify">
+              <img src="img/spotify-transp-white-1.png" alt="logo Spotify" class="xs_hidden">
               <i class="fab fa-spotify"></i>
             </a>
           </section>
@@ -31,11 +31,11 @@
             <ul class="nav_logos">
               <li>
                 <a href="#">
-                  <div class="active"></div>
+                  <div class="active xs_hidden"></div>
                   <div class="icon">
                     <img src="img/house.svg" alt="home">
                   </div>
-                  <span>Home</span>
+                  <span class="xs_hidden">Home</span>
                 </a>
               </li>
               <li>
@@ -43,7 +43,7 @@
                   <div class="icon">
                     <img src="img/search_thin.svg" alt="home">
                   </div>
-                  <span>Cerca</span>
+                  <span class="xs_hidden">Cerca</span>
                 </a>
               </li>
               <li>
@@ -51,7 +51,7 @@
                   <div class="icon">
                     <img src="img/library_thin.svg" alt="home">
                   </div>
-                  <span>La tua libreria</span>
+                  <span class="xs_hidden">La tua libreria</span>
                 </a>
               </li>
             </ul>
@@ -60,41 +60,46 @@
 
           <!-- playlist -->
           <section class="playlist">
-            <h2>playlist</h2>
-            <!-- crea playlist -->
-            <div class="create">
-              <div class="add">
-                <img src="img/plus.svg" alt="add">
+            <div class="first-space  xs_hidden">
+              <h2>playlist</h2>
+              <div class="create">
+                <div class="add">
+                  <img src="img/plus.svg" alt="add">
+                </div>
+                <span>Crea Playlist</span>
               </div>
-              <span>Crea Playlist</span>
+              <!-- crea playlist -->
+
+              <div class="playlist_list  xs_hidden">
+                <ul>
+                  <li><a href="#">Nome Playlist</a></li>
+                  <li><a href="#">Nome Playlist</a></li>
+                  <li><a href="#">Nome Playlist</a></li>
+                  <li><a href="#">Nome Playlist</a></li>
+                  <li><a href="#">Nome Playlist</a></li>
+                  <li><a href="#">Nome Playlist</a></li>
+                  <li><a href="#">Nome Playlist</a></li>
+                </ul>
+              </div>
             </div>
             <!-- crea playlist -->
 
-            <div class="playlist_list">
-              <ul>
-                <li><a href="#">Nome Playlist</a></li>
-                <li><a href="#">Nome Playlist</a></li>
-                <li><a href="#">Nome Playlist</a></li>
-                <li><a href="#">Nome Playlist</a></li>
-                <li><a href="#">Nome Playlist</a></li>
-                <li><a href="#">Nome Playlist</a></li>
-                <li><a href="#">Nome Playlist</a></li>
-              </ul>
+            <!-- account -->
+            <div class="account">
+              <div class="install">
+                <a href="#">
+                  <i class="fas fa-arrow-down"></i>
+                  <span class="xs_hidden">Installa app</span>
+                </a>
+              </div>
+              <div class="account_name">
+                <i class="fas fa-user-circle"></i>
+                <span class="xs_hidden">John Doe</span>
+              </div>
             </div>
           </section>
+          <!-- account -->
 
-          <div class="account">
-            <div class="install">
-              <a href="#">
-                <i class="fas fa-arrow-down"></i>
-                <span>Installa app</span>
-              </a>
-            </div>
-            <div class="account_name">
-              <i class="fas fa-user-circle"></i>
-              <span>John Doe</span>
-            </div>
-          </div>
           <!-- /playlist -->
         </nav>
         <!-- navbar laterale -->
