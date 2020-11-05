@@ -43,7 +43,6 @@ main {
   display: flex;
   flex-direction: column;
   height: calc(100% - 90px);
-  overflow: hidden;
 }
 
 /* logo */
@@ -117,6 +116,8 @@ main {
 #playlist {
   padding: 20px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 #playlist h2 {
@@ -255,6 +256,10 @@ footer {
   color: white;
 }
 
+.grey-color {
+  color: #717171;
+}
+
 .track,
 .volume {
   width: 250px;
@@ -271,9 +276,34 @@ footer {
   align-items: center;
   padding-left: 20px;
 }
+
+.brano img {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+}
+
+.artist-name {
+  display: flex;
+  flex-direction: column;
+}
+
 #artist {
   font-weight: 700;
-  display: block;
+  /* display: block; */
+}
+
+#track-name {
+  font-weight: 700;
+  font-size: .7rem;
+}
+
+.like i {
+  margin-right: 10px;
+}
+
+.like i:hover {
+  cursor: pointer;
 }
 /***************** /footer *****************/
 
