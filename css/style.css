@@ -225,6 +225,7 @@ main {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  z-index: 1;
 }
 
 .upgrade-bar a {
@@ -327,11 +328,11 @@ footer {
     justify-content: center;
   }
   .commands i {
-    font-size: 1.3rem;
+    font-size: 1rem;
     padding: 0 10px;
   }
   .commands i:nth-child(3) {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
   .bar {
@@ -446,15 +447,20 @@ footer {
     width: calc(100% - 50px);
   }
 
-  footer {
-
-  }
-
+  /* footer */
   .brano img {
     width: 30px;
     height: 30px;
   }
 
+  .like {
+    padding-left: 20px;
+  }
+
+  .volume-slider {
+    min-width: 0px;
+  }
+  /* /footer */
 }
 
 @media screen and (max-width: 767px) {
