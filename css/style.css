@@ -283,7 +283,38 @@ main {
   width: 30%;
   height: 2px;
 }
-/* content-nav */
+/* /content-nav */
+
+/* played container */
+.recently {
+  padding: 20px;
+}
+
+.cover-container {
+  margin: 20px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.played-container {
+  width: 200px;
+  height: 200px;
+
+}
+
+.played-container img {
+  width: 100%;
+  max-height: 100%;
+}
+
+.cover i {
+  display: none;
+}
+/* /played container */
+
+
 /***************** /main *****************/
 
 /***************** footer *****************/
