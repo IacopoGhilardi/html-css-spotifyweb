@@ -10,33 +10,40 @@ body {
 }
 
 .wrapper {
-    width: 100%;
-    height: 100vh;
-    background-color: black;
+  width: 100%;
+  height: 100vh;
 }
 
 /***************** main *****************/
 main {
   display: flex;
   height: calc(100% - 100px);
+  overflow-y: hidden;
 }
 
 /* main nav */
-.main-nav {
+#main-nav {
   background: black;
   width: 250px;
   padding-top: 20px;
   color: #6B6B6B;
-  overflow-y: hidden;
-  position: relative;
+  min-height: 480px;
 }
 
-.main-nav a {
+#main-nav a {
   color: #6B6B6B;
   text-decoration: none;
 }
-.main-nav a:hover {
+#main-nav a:hover {
   color: white;
+}
+
+/* nav-top */
+.nav-top {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 90px);
+  overflow: hidden;
 }
 
 /* logo */
@@ -67,10 +74,10 @@ main {
 }
 
 .nav_logos li a {
-  display: flex;
   padding: 0 20px;
+  display: flex;
+  align-items: center;
 }
-
 .nav_logos li a:hover {
   color: white;
 }
@@ -85,40 +92,34 @@ main {
   z-index: 2;
 }
 
-.active + .icon,
-.active ~ span {
+.active + a .icon,
+.active + a span {
   color: white;
 }
 
 .icon {
   width: 25px;
   height: 100%;
-
-  margin-right: 15px;
+  margin-right: 10px;
 }
 
 .icon img {
   max-width: 100%;
   height: 100%;
-    vertical-align: middle;
 }
 
 .nav_logos li a span {
   font-size: .9rem;
 }
-
 /* /navbar top */
 
 /* playlist */
-.playlist {
+#playlist {
   padding: 20px;
-  height: 100%;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  overflow: hidden;
 }
-.playlist h2 {
+
+#playlist h2 {
   text-transform: uppercase;
   color: white;
   font-size: .9rem;
@@ -129,16 +130,16 @@ main {
 .create {
   display: flex;
   align-items: center;
-  width: 100%;
   border: none;
 }
+.create:hover {
+  cursor: pointer;
+ }
 .create:hover .add {
   background: white;
-  cursor: pointer;
 }
 .create:hover span {
   color: white;
-  cursor: pointer;
 }
 
 .add {
@@ -150,7 +151,8 @@ main {
 
 .playlist_list {
   margin-top: 20px;
-  overflow-y: scroll;
+  overflow: auto;
+  height: 80%;
 }
 
 .playlist_list li {
@@ -161,19 +163,17 @@ main {
 }
 /* playlist */
 
+/* nav-bottom */
+.nav-bottom {
+  height: 90px;
+}
 /* account */
 .account {
   background: black;
-  padding: 10px 20px;
-  position: sticky;
-  bottom: 0;
-  left: 0;
-  margin-top: 150px;
+  padding: 0 20px;
 }
 
 .install {
-  display: flex;
-  align-items: center;
   padding: 10px 0;
   border-bottom: 1px solid #6B6B6B;
   font-size: .8rem;
@@ -191,8 +191,6 @@ main {
   display: flex;
   align-items: center;
   padding: 10px 0;
-  display: flex;
-  align-items: center;
 }
 
 .account_name span {
@@ -208,10 +206,36 @@ main {
 /* /main nav */
 
 
-.main-content {
+#main-content {
   width: calc(100% - 250px);
-  background: lightblue;
+  background: #141922;
   overflow-y: scroll;
+  padding-top: 100px;
+  color: white;
+}
+
+.upgrade-bar {
+  position: fixed;
+  top: 0;
+  left: 250px;
+  width: calc(100% - 250px);
+  height: 100px;
+  background: rgba(8, 11, 18, 0.8);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.upgrade-bar a {
+  color: white;
+  text-decoration: none;
+  border: 1px solid white;
+  padding: 10px 30px;
+  border-radius: 50px;
+  margin-right: 20px;
+}
+.upgrade-bar a:hover {
+  transform: scale(1.2);
 }
 /***************** /main *****************/
 
@@ -222,13 +246,34 @@ footer {
   height: 100px;
 }
 
-.footer_wrapper {
+#footer_wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100%;
-  padding: 20px;
+  padding: 20px 0;
   color: white;
+}
+
+.track,
+.volume {
+  width: 250px;
+}
+
+.track {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brano {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+#artist {
+  font-weight: 700;
+  display: block;
 }
 /***************** /footer *****************/
 
@@ -237,15 +282,15 @@ footer {
 /* media query */
 @media screen and (max-width: 459px) {
 
-  .main-nav {
-    width: 50px;
-  }
-
   .xs_hidden {
     display: none;
   }
 
-  .logo-nav{
+  .main-nav {
+    width: 50px;
+  }
+
+  .logo-nav {
     padding-left: 10px;
     margin-bottom: 5px;
   }
@@ -253,7 +298,6 @@ footer {
   .nav_logos li a {
     padding: 0 10px;
     justify-content: center;
-    align-items: center;
   }
 
   .icon {
@@ -266,19 +310,15 @@ footer {
     font-size: 2rem;
   }
 
-  .playlist {
-    justify-content: flex-end;
-    padding: 0;
-  }
-
   .account {
-    padding: 10px;
+    padding: 0 10px;
     margin: 0;
   }
 
   .account_name,
   .install {
     border: none;
+    display: flex;
     justify-content: center;
   }
 
