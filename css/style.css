@@ -113,14 +113,14 @@ main {
 /* /navbar top */
 
 /* playlist */
-#playlist {
+.playlist {
   padding: 20px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
 }
 
-#playlist h2 {
+.playlist h2 {
   text-transform: uppercase;
   color: white;
   font-size: .9rem;
@@ -260,12 +260,13 @@ footer {
   color: #717171;
 }
 
-.track,
-.volume {
+.footer-left,
+.footer-right {
   width: 250px;
 }
 
-.track {
+/* track */
+.footer-left {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -290,7 +291,6 @@ footer {
 
 #artist {
   font-weight: 700;
-  /* display: block; */
 }
 
 #track-name {
@@ -305,18 +305,98 @@ footer {
 .like i:hover {
   cursor: pointer;
 }
+/* /track */
+
+/* footer-mid */
+  .footer-mid {
+    width: calc(100% - 500px);
+    height: 100%;
+    margin: 0 20px;
+    min-width: 200px;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .commands {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .commands i {
+    font-size: 1.3rem;
+    padding: 0 10px;
+  }
+  .commands i:nth-child(3) {
+    font-size: 2.2rem;
+  }
+
+  .bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .time {
+    padding: 0 30px;
+    font-size: .8rem;
+  }
+
+  #track-bar {
+    width: 50%;
+    min-width: 150px;
+	  position: relative;
+	  background: #555;
+    border-radius: 25px;
+    padding: 1px;
+  }
+
+  .progress {
+    display: block;
+    width: 25%;
+    background: #C1C1C1;
+    padding: 2px;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+  }
+/* /footer-mid */
+.footer-right {
+  display: flex;
+  align-items: center;
+}
+
+.footer-right i {
+  margin-right: 10px;
+}
+
+.volume-slider {
+  width: 50%;
+  min-width: 75px;
+  position: relative;
+  background: #555;
+  border-radius: 25px;
+  padding: 1px;
+}
+/* footer-right */
+
+/* /footer-right */
 /***************** /footer *****************/
 
 
 
 /* media query */
-@media screen and (max-width: 459px) {
+@media screen and (max-width: 576px) {
 
-  .xs_hidden {
+  .xs-hidden {
     display: none;
   }
 
-  .main-nav {
+  #main-nav {
     width: 50px;
   }
 
@@ -357,8 +437,40 @@ footer {
     margin: 0;
   }
 
-  .main-content {
-    width: calc(100% - 50px)
+  #main-content {
+    width: calc(100% - 50px);
   }
+
+  .upgrade-bar {
+    left: 50px;
+    width: calc(100% - 50px);
+  }
+
+  footer {
+
+  }
+
+  .brano img {
+    width: 30px;
+    height: 30px;
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+
+  .like {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .time {
+    padding: 0 5px;
+  }
+
+  #artist {
+    font-size: .8rem;
+  }
+
 }
 /* media query */

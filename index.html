@@ -23,7 +23,7 @@
             <!-- logo -->
             <div class="logo-nav">
               <a href="#" id="logo">
-                <img src="img/spotify-transp-white-1.png" alt="logo Spotify" class="xs_hidden">
+                <img src="img/spotify-transp-white-1.png" alt="logo Spotify" class="xs-hidden">
                 <i class="fab fa-spotify"></i>
               </a>
             </div>
@@ -33,22 +33,22 @@
             <div class="menu-nav">
               <ul class="nav_logos">
                 <li>
-                  <div class="active xs_hidden"></div>
+                  <div class="active xs-hidden"></div>
                   <a href="#">
                     <img src="img/house.svg" alt="home" class="icon">
-                    <span class="xs_hidden">Home</span>
+                    <span class="xs-hidden">Home</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">
                     <img src="img/search_thin.svg" alt="home" class="icon">
-                    <span class="xs_hidden">Cerca</span>
+                    <span class="xs-hidden">Cerca</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">
                     <img src="img/library_thin.svg" alt="home" class="icon">
-                    <span class="xs_hidden">La tua libreria</span>
+                    <span class="xs-hidden">La tua libreria</span>
                   </a>
                 </li>
               </ul>
@@ -56,7 +56,7 @@
             <!-- /navbar top -->
 
             <!-- playlist -->
-            <div id="playlist" class="xs_hidden">
+            <div class="xs-hidden playlist">
                 <h2>playlist</h2>
                 <!-- crea playlist -->
                 <a class="create">
@@ -66,7 +66,7 @@
                 <!-- /crea playlist -->
 
                 <!-- lista playlist -->
-                <div class="playlist_list  xs_hidden">
+                <div class="playlist_list  xs-hidden">
                   <ul>
                     <li><a href="#">Nome Playlist</a></li>
                     <li><a href="#">Nome Playlist</a></li>
@@ -92,12 +92,12 @@
               <div class="install">
                 <a href="#">
                   <i class="fas fa-arrow-down"></i>
-                  <span class="xs_hidden">Installa app</span>
+                  <span class="xs-hidden">Installa app</span>
                 </a>
               </div>
               <div class="account_name">
                 <i class="fas fa-user-circle"></i>
-                <span class="xs_hidden">John Doe</span>
+                <span class="xs-hidden">John Doe</span>
               </div>
             </div>
             <!-- account -->
@@ -129,7 +129,8 @@
     <!-- footer -->
     <footer>
       <div id="footer_wrapper">
-        <div class="track">
+        <!-- footer left -->
+        <div class="footer-left">
           <div class="brano">
             <img src="img/copertina.jpg" alt="copertina">
             <div class="artist-name">
@@ -142,8 +143,10 @@
             <i class="far fa-folder grey-color"></i>
           </div>
         </div>
+        <!-- /footer left -->
 
-        <div class="play">
+        <!-- footer mid -->
+        <div class="footer-mid">
           <div class="commands">
             <i class="fas fa-random"></i>
             <i class="fas fa-step-backward"></i>
@@ -151,16 +154,29 @@
             <i class="fas fa-step-forward"></i>
             <i class="fas fa-redo-alt"></i>
           </div>
-          <div id="track-bar">
+
+          <div class="bar">
+            <span class="time">0:25</span>
+            <div id="track-bar">
+              <span class="progress"></span>
+            </div>
+            <span class="time">4:35</span>
+          </div>
+
+        </div>
+        <!-- /footer mid -->
+
+        <!-- footer right -->
+        <div class="footer-right">
+          <i class="fas fa-bars"></i>
+          <i class="fas fa-desktop"></i>
+          <i class="fas fa-volume-up"></i>
+          <div class="volume-slider">
             <span class="progress"></span>
           </div>
         </div>
-
-        <div class="volume">
-          dasdasd
-        </div>
       </div>
-
+        <!-- /footer right -->
     </footer>
      <!-- /footer -->
 
