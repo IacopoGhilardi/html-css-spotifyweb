@@ -14,6 +14,16 @@ body {
   height: 100vh;
 }
 
+/* utilities */
+h1,h2,h3,h4,h5 {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+/* utilities */
+
 /***************** main *****************/
 main {
   display: flex;
@@ -32,7 +42,6 @@ main {
 
 #main-nav a {
   color: #6B6B6B;
-  text-decoration: none;
 }
 #main-nav a:hover {
   color: white;
@@ -64,7 +73,7 @@ main {
 /* /logo */
 
 /* navbar top */
-.nav_logos li {
+.nav-logos li {
   position: relative;
   width: 100%;
   height: 40px;
@@ -72,23 +81,25 @@ main {
   list-style: none;
 }
 
-.nav_logos li a {
+.nav-logos li a {
   padding: 0 20px;
   display: flex;
   align-items: center;
+  z-index: 1;
 }
-.nav_logos li a:hover {
+.nav-logos li a:hover {
   color: white;
+  cursor: pointer;
 }
 
-.nav_logos .active {
+.nav-logos .active {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   border-left: 3px solid #ADFF2F;
-  z-index: 2;
+  z-index: 1;
 }
 
 .active + a .icon,
@@ -107,7 +118,7 @@ main {
   height: 100%;
 }
 
-.nav_logos li a span {
+.nav-logos li a span {
   font-size: .9rem;
 }
 /* /navbar top */
@@ -122,7 +133,6 @@ main {
 
 .playlist h2 {
   text-transform: uppercase;
-  color: white;
   font-size: .9rem;
   font-weight: 700;
   margin-bottom: 15px;
@@ -150,13 +160,13 @@ main {
   margin-right: 10px;
 }
 
-.playlist_list {
+.playlist-list {
   margin-top: 20px;
   overflow: auto;
   height: 80%;
 }
 
-.playlist_list li {
+.playlist-list li {
   list-style: none;
   height: 30px;
   line-height: 30px;
@@ -188,31 +198,29 @@ main {
   margin-right: 10px;
 }
 
-.account_name {
+.account-name {
   display: flex;
   align-items: center;
   padding: 10px 0;
 }
 
-.account_name span {
+.account-name span {
   font-weight: 700;
   color: white;
 }
-.account_name i {
+.account-name i {
   margin-right: 10px;
   font-size: 1.5rem;
 }
 /* account */
-
 /* /main nav */
 
-
+/* main content */
 #main-content {
   width: calc(100% - 250px);
   background: #141922;
   overflow-y: scroll;
   padding: 100px 20px 0;
-  color: white;
 }
 /* upgrade */
 .upgrade-bar {
@@ -229,12 +237,12 @@ main {
 }
 
 .upgrade-bar a {
-  color: white;
   text-decoration: none;
   border: 1px solid white;
   padding: 10px 30px;
   border-radius: 50px;
   margin-right: 20px;
+  color: white;
 }
 .upgrade-bar a:hover {
   transform: scale(1.2);
@@ -341,6 +349,7 @@ main {
 }
 .cover:hover i {
   display: block;
+  color: white;
 }
 .cover:hover img {
   opacity: 0.5;
@@ -363,7 +372,7 @@ footer {
   height: 100px;
 }
 
-#footer_wrapper {
+#footer-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -414,6 +423,11 @@ footer {
   font-weight: 700;
   font-size: .7rem;
 }
+#track-name:hover {
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+}
 
 .like i {
   margin-right: 10px;
@@ -444,10 +458,16 @@ footer {
   align-items: center;
   justify-content: center;
 }
+
 .commands i {
   font-size: 1rem;
   padding: 0 10px;
 }
+.commands i:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
 .commands i:nth-child(3) {
   font-size: 2rem;
 }
@@ -464,38 +484,57 @@ footer {
   font-size: .8rem;
 }
 
-#track-bar {
-  width: 60%;
-  min-width: 150px;
+.slider {
   position: relative;
   background: #555;
   border-radius: 25px;
   padding: 1px;
 }
+.slider:hover .progress {
+  background: #ADFF2F;
+  cursor: pointer;
+}
+.slider:hover .slider-handler {
+  display: block;
+}
+
+#track-bar {
+  width: 60%;
+  min-width: 150px;
+}
+
+#volume {
+  width: 50%;
+  min-width: 75px;
+}
 
 .progress {
   display: block;
   width: 25%;
+  position: relative;
   background: #C1C1C1;
   padding: 2px;
   border-radius: 25px;
-  position: relative;
   overflow: hidden;
+}
+
+.slider-handler {
+  position: absolute;
+  left: 25%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  display: none;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
 }
 /* /footer-mid */
 .footer-right {
   display: flex;
   justify-content: space-around;
   align-items: center;
-}
-
-.volume-slider {
-  width: 50%;
-  min-width: 75px;
-  position: relative;
-  background: #555;
-  border-radius: 25px;
-  padding: 1px;
 }
 /* footer-right */
 
@@ -522,7 +561,7 @@ footer {
     margin-bottom: 5px;
   }
 
-  .nav_logos li a {
+  .nav-logos li a {
     padding: 0 10px;
     justify-content: center;
   }
@@ -542,14 +581,14 @@ footer {
     margin: 0;
   }
 
-  .account_name,
+  .account-name,
   .install {
     border: none;
     display: flex;
     justify-content: center;
   }
 
-  .account_name i,
+  .account-name i,
   .install i {
     margin: 0;
   }
