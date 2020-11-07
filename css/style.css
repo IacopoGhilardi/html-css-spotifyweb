@@ -91,6 +91,9 @@ main {
   color: white;
   cursor: pointer;
 }
+.nav-logos li a:hover svg path {
+  fill: white;
+}
 
 .nav-logos .active {
   position: absolute;
@@ -100,22 +103,19 @@ main {
   height: 100%;
   border-left: 3px solid #ADFF2F;
   z-index: 1;
+  cursor: pointer;
 }
 
-.active + a .icon,
+.active + a svg path,
 .active + a span {
   color: white;
+  fill: white;
 }
 
-.icon {
+svg {
   width: 25px;
   height: 100%;
   margin-right: 10px;
-}
-
-.icon img {
-  max-width: 100%;
-  height: 100%;
 }
 
 .nav-logos li a span {
