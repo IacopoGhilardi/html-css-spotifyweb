@@ -686,6 +686,7 @@ footer {
 }
 /* sm */
 
+/* lg */
 @media screen and (min-width: 768px) and (max-width: 991px) {
 
   .cover-container {
@@ -695,4 +696,5 @@ footer {
     width: 25%;
   }
 }
+/* lg */
 /* media query */
